@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador de Caracteres</title>
+</head>
+<body>
+
+<textarea id="textoArea" placeholder="Digite seu texto"></textarea>
+<button onclick="contarCaracteres()">Enviar</button>
+<p id="contador"></p>
+
+<script>
+function contarCaracteres() {
+  // Obter o valor inserido pelo usuário no textarea
+  var texto = document.getElementById("textoArea").value;
+
+  // Contar o número de caracteres
+  var numeroCaracteres = texto.length;
+
+  // Exibir o número de caracteres
+  document.getElementById("contador").innerText = "Número de caracteres: " + numeroCaracteres;
+}
+</script>
+
+</body>
+</html>

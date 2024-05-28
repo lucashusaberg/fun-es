@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador de Número Positivo</title>
+</head>
+<body>
+
+<input type="text" id="numeroInput" placeholder="Digite um número">
+<button onclick="validarNumeroPositivo()">Validar</button>
+<p id="mensagem"></p>
+
+<script>
+function validarNumeroPositivo() {
+  // Obter o valor inserido pelo usuário no input
+  var valor = parseFloat(document.getElementById("numeroInput").value);
+
+  // Verificar se o valor é um número e se é positivo
+  if (!isNaN(valor) && valor > 0) {
+    // Exibir mensagem de sucesso se for positivo
+    document.getElementById("mensagem").innerText = "O número é positivo.";
+  } else {
+    // Exibir mensagem de erro se não for um número positivo
+    document.getElementById("mensagem").innerText = "Por favor, insira um número positivo válido.";
+  }
+}
+</script>
+
+</body>
+</html>
